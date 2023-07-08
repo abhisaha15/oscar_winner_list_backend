@@ -46,7 +46,7 @@ def home(year="2023"):
         year = 2023
     else:
         year = str(year)
-    cur.execute("SELECT * FROM oscar_data WHERE YEAR = {};".format(year))
+    cur.execute("SELECT * FROM oscar_data WHERE YEAR = '{}';".format(year))
     d_a_t_a = cur.fetchall()
 
     cur.close()
